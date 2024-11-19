@@ -1,7 +1,7 @@
 class Solution {
 public:
     int solve(vector<vector<int>>& matrix, vector<vector<int>>& dp, int i, int j) {
-        if (i < 0 || i > matrix.size() || j < 0 || j >= matrix[0].size()) {
+        if (i < 0 || i >=matrix.size() || j < 0 || j >= matrix[0].size()) {
             return 0;
         }
         if (dp[i][j] != -1) {
