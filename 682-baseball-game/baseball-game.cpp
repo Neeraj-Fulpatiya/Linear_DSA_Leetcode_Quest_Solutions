@@ -1,26 +1,47 @@
 class Solution {
 public:
-    static int calPoints(vector<string>& operations) {
-        vector<int> stack;
-        for(string& s: operations){
-            char c=s[0];
-            switch(c){
-                case '+': stack.push_back(stack.back()+(*(stack.end()-2))); break;
-                case 'D': stack.push_back(stack.back()*2); break;
-                case 'C': stack.pop_back(); break;
-                default: stack.push_back(stoi(s));
-            }
+  
+    int calPoints(vector<string>& operations) {
+      vector<int>arr(1001,0);
+        int top=-1;
+        int i=0;
+        while(i<operations.size()){
+
+            if(operations[i]=="+"){
+                        int a=arr[top];
+                        top--;
+                        int result=a+arr[top];
+                        top++;
+                        arr[top]=a;
+                        top++;
+                        arr[top]=result;
+                        i++;
+                    }
+                    else if(operations[i]=="D"){
+                        int d=2*arr[top];
+                        top++;
+                        arr[top]=d;
+                        i++;
+                    }
+                    else if(operations[i]=="C"){
+                        arr[top]=0;
+                        top--;
+                        i++;
+                    }
+                    else{
+                        top++;
+                        arr[top]=stoi(operations[i]);
+                        i++;
+                    }
         }
-        return accumulate(stack.begin(), stack.end(), 0);
+
+        int sum=0;
+        int j=0;
+        while(j<arr.size()){
+            sum=sum+arr[j];
+            j++;
+        }
+     
+     return sum;
     }
 };
-
-
-
-
-auto init = []() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-    return 'c';
-}();
