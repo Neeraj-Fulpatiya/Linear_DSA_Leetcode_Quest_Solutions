@@ -7,7 +7,7 @@ class Solution {
         res[1]=e;
         return res ;
     }
-      int start(int[] nums, int t){
+    private  int start(int[] nums, int t){
       int l=0,r=nums.length-1;
 int ans=-1;
       while(l<=r){
@@ -27,7 +27,7 @@ int ans=-1;
       return ans;
 
     }
-          int ending(int[] nums, int t){
+        private  int ending(int[] nums, int t){
 
         int l=0,r=nums.length-1;
 int ans=-1;
