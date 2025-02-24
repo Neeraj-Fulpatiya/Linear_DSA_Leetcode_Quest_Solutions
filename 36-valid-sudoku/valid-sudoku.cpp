@@ -13,7 +13,8 @@ public:
                     
                     string row="row"+to_string(i)+board[i][j];// making the row in string format, same with col and box
                     string col="col"+to_string(j)+board[i][j];
-                    string box="box"+to_string((i/3)*3+j/3)+board[i][j];// this formula u can have derivation by your way 
+                    string box="box"+to_string((i/3)*3+j/3)+board[i][j];// this formula u can have derivation by your way ,, bs ye smj jao baki kaam kuch ni h 
+                    
                    
                    if(s.find(row)==s.end() && s.find(col)==s.end()&& s.find(box)==s.end()){//this means i try to find 3 of these and unable to find , so now we cna insert
                     s.insert(row);
