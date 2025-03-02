@@ -1,7 +1,12 @@
 class Solution {
 public:
+bool comp(string a,string b){
+return a+b>b+a;
+}
     string largestNumber(vector<int>& nums) {
 sort(nums.rbegin(),nums.rend());
+
+
 
 vector<string>str;
 // for(int )
@@ -10,9 +15,9 @@ for(auto p:nums){
 
 }
 
-sort(str.begin(),str.end(),[&](string a,string b){
-  return a+b > b+a;  
-});
+sort(str.begin(), str.end(), [](const string &a, const string &b) {
+    return a + b > b + a;  // Custom sorting logic
+});  
 
 string ans="";
 for(auto s:str){
