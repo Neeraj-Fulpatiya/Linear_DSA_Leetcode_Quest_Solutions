@@ -10,11 +10,12 @@ int psum=0;
 psum+=nums[i];
 if(m.find(psum-k)!=m.end()){
     ans=ans+m[psum-k];
-    // m[psum]++;
-}
-// else{
     m[psum]++;
-// }
+}
+else{
+m[psum]++;
+}
+
         }
         
         return ans;
