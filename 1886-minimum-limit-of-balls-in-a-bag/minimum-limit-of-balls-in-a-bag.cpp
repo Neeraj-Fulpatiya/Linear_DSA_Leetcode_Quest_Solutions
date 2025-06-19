@@ -12,7 +12,7 @@ public:
     int minimumSize(vector<int>& nums, int maxOperations) {
         int n = nums.size(); 
         int l = 1, r = 1e9; 
-        int ans = 9; 
+        int ans = -9; 
         while (l <= r) {
             int mid = l + (r - l) / 2; 
             if (check(mid, nums, maxOperations)) {
