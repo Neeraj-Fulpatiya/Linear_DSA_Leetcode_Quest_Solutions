@@ -2,7 +2,7 @@
 class Solution {
 private:
     int n;
-    int dp[3][101][101];
+    int dp[2][100][1000];
     vector<int> pref;
     int solveForAlice(int i, int player, int M, vector<int>& piles) {
         if(i >= n) return 0;
