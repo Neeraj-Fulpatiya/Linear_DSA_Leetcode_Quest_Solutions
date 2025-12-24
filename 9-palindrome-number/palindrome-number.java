@@ -3,18 +3,16 @@ class Solution {
         int n=x;
 
         if(x<0)return false;
+int ans=0;
+int pro=1;
+while(n>0){
+    int rem=n%10;
+    ans=10*ans+rem;
+    // pro*=10;
+    n/=10;
 
-String s=String.valueOf(x);
-
-String temp="";
-
-for(int i=s.length()-1;i>=0;i--){
-  temp= temp + s.charAt(i);
 }
-
-if(temp.equals(s))return true;
-
+if(ans==x)return true;
 return false;
-
     }
 }
