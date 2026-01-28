@@ -1,8 +1,8 @@
 class Solution {
 public:
     int strStr(string haystack, string needle) {
-        int index = haystack.find(needle);
-        if(index != string::npos) return index;
-        else return -1;
+     int idx=haystack.find(needle);
+     if(idx==-1)return -1;
+     return idx;
     }
 };
