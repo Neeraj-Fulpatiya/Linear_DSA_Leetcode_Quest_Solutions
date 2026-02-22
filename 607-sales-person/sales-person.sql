@@ -6,3 +6,9 @@ FROM orders
 WHERE com_id = (SELECT com_id
 FROM company
 WHERE name = "Red"))
+
+
+
+
+
+
