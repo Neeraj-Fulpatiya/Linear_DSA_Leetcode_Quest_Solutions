@@ -9,9 +9,11 @@ public:
         };
         int l = 0, r = n*m - 1;
         while(l <= r){
+            
             int mid = (l + r)/2;
             auto [i, j] = idxFinder(mid);
-            if(matrix[i][j] == target) return true;
+            if(matrix[i][j] == target) 
+            return true;
             if(matrix[i][j] > target){
                 r = mid - 1;
             }
